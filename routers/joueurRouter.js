@@ -1,5 +1,5 @@
 const joueurRouter = require('express').Router();
-// const joueurModel = require('../model/');
+// const joueurModel = require('../model/joeurModel');
 
 joueurRouter.get('/', async (req, res) => {
     const [joueur] = await joueurModel.findClub();

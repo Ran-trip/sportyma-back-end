@@ -1,0 +1,9 @@
+const connection = require('../config/db-config');
+
+const TABLE = 'saison_joueur';
+
+const findClubJoueur = () => connection.promise().query(`SELECT * FROM ${TABLE}`);
+
+module.exports = {
+    findClubJoueur,
+}

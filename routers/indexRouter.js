@@ -1,12 +1,14 @@
-const club = require('./clubRouter');
-// const joueur = require('./joueurRouter');
-// const saison = require('./saisonRouter');
+const clubJoueurRouteur = require('./clubJoueurRouter');
+const clubRouter = require('./clubRouter');
+const joueurRouter = require('./joueurRouter');
+const saisonRouter = require('./saisonRouter');
 
 
 const setupRoutes = (app) => {
-    app.use('/club', club);
-    // app.use('/joueur', joueurRouter);
-    // app.use('/saison', saisonRouter);
+    app.use('/club', clubRouter);
+    app.use('/joueur', joueurRouter);
+    app.use('/saison', saisonRouter);
+    app.use('/clubJoueur', clubJoueurRouteur);
 };
 
 module.exports = setupRoutes;
