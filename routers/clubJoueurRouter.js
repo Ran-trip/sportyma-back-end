@@ -1,9 +1,9 @@
-const clubJoueurRouteur = require('express').Router();
-const clubJoueurModel = require('../model/clubJoueurMode');
+const clubJoueurRouter = require('express').Router();
+const clubJoueurModel = require('../model/clubJoueurModel');
 
-clubJoueurModel.get('/', async (req, res) => {
+clubJoueurRouter.get('/', async (req, res) => {
     const [clubJoueur] = await clubJoueurModel.findClubJoueur();
     return res.json(clubJoueur);
 });
 
-module.exports = clubJoueurRouteur;
+module.exports = clubJoueurRouter;
